@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div class="slides" style="--img: url('../images/back1.png')">
+          <div class="content">
+            <h2>Title 6</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url('../images/back2.jpg')">
+          <div class="content">
+            <h2>Title 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url('../images/back3.jpg')">
+          <div class="content">
+            <h2>Title 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url('../images/back4.jpg')">
+          <div class="content">
+            <h2>Title 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url('../images/back5.jpg')">
+          <div class="content">
+            <h2>Title 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url('../images/back6.jpg')">
+          <div class="content">
+            <h2>Title 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              esse amet quasi rem enim? Maiores praesentium illo, at voluptatem
+              tempora nihil iste necessitatibus vel sit provident. Id iure fuga
+              repudiandae?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+
+    <script>
+      let prev = document.querySelector(".prev");
+      let next = document.querySelector(".next");
+      let slider = document.querySelector(".slider");
+
+      next.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slides");
+        slider.appendChild(slides[0]);
+      });
+      prev.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slides");
+        slider.prepend(slides[slides.length - 1]);
+      });
+    </script>
+  </body>
+</html>
